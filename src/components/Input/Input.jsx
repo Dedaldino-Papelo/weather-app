@@ -1,14 +1,15 @@
 import React from 'react'
 import { InputText } from './input.style'
 
-const Input = ({HandleInput}) => {
+const Input = ({HandleInput, HandleSubmit}) => {
 
   return (
     <div>
       <InputText
         type='text'
         placeholder='Procurar'
-        onKeyPress={HandleInput}
+        onChange={HandleInput}
+        onKeyPress={HandleSubmit}
       />
     </div>
   )
