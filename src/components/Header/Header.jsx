@@ -3,11 +3,11 @@ import Input from '../Input/Input'
 import {HeaderContainer,Logo} from './header.style'
 
 
-const Header = () => {
+const Header = ({HandleChange}) => {
   return (
     <HeaderContainer>
         <Logo>Previsão</Logo>
-        <Input />
+        <Input HandleInput={HandleChange} />
     </HeaderContainer>
   )
 }
