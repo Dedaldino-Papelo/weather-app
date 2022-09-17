@@ -28,6 +28,7 @@ export const Unit = styled.div`
     flex-direction: column;
     gap: 10px;
     font-size: 1.20em;
+    cursor: pointer;
 `
 
 export const Degree = styled.h1`

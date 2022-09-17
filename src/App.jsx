@@ -17,7 +17,6 @@ function App() {
     if(e.key === 'Enter'){
       const resp = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${import.meta.env.VITE_WEATHER_KEY}`)
       setData(resp.data)
-      console.log(resp.data)
     }
   }
 
