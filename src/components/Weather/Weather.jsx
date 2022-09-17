@@ -13,7 +13,8 @@ import {Container,
         Numbers} from './weather.style.js'
 
 const Weather = ({data}) => {
-  const [value, setValue] = useState(null)
+  const number = data.main ? data.main.temp: null
+  const [value, setValue] = useState(number)
 
   useEffect(() => {
     if(data && data.main){
@@ -22,8 +23,12 @@ const Weather = ({data}) => {
   }, [data])
 
   const HandleCelcius = () => {
-    let celcius = 32
+    let celcius = (value - 32) / 1.8
     setValue(celcius)
+  }
+
+  const HandleFahrenheit = () => {
+    setValue(data.main.temp)
   }
 
   return (
@@ -42,7 +47,7 @@ const Weather = ({data}) => {
         </Numbers>
           {data.name && (
             <Unit>
-            <span>F</span>
+            <span onClick={HandleFahrenheit}>F</span>
             <span onClick={HandleCelcius}>C</span>
           </Unit>
           )}
