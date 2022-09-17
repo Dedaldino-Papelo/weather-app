@@ -36,7 +36,7 @@ const Weather = ({data}) => {
       <TopWeather>
         <Numbers>
           <div className='Location'>
-              <City>{data.name} {data.sys ? data.sys.country: ''}</City>
+          {data.name ? <City>{data.name}, {data.sys ? data.sys.country: ''}</City>: '' }
             </div>
             <Temperature className='temp'>
               {value !== null ? <Degree>{value.toFixed()}°</Degree>: ''}
@@ -58,7 +58,7 @@ const Weather = ({data}) => {
         <MainContainer>
         <Box>
           <BoxTitle>Feels Like</BoxTitle>
-          {data.main ? <p>{data.main.feels_like.toFixed()}° F</p> : ''} 
+          {value !== null ? <p>{value.toFixed()}°</p>: ''}
         </Box>
         <Box>
           <BoxTitle>Humidity</BoxTitle>
