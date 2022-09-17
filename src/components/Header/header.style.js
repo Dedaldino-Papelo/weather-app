@@ -13,5 +13,9 @@ color: #fff;
 `
 
 export const Logo = styled.h2`
-font-weight: bold
+font-weight: bold;
+
+@media only screen and (max-width: 767px) {
+        font-size: 1em;
+    }
 `
