@@ -28,6 +28,8 @@ export const Unit = styled.div`
     flex-direction: column;
     gap: 10px;
     font-size: 1.20em;
+`
+export const TempOptions = styled.span`
     cursor: pointer;
 `
 

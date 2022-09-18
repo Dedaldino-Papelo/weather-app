@@ -10,6 +10,7 @@ import {Container,
         BoxTitle,
         Temperature,
         Unit,
+        TempOptions,
         Numbers} from './weather.style.js'
 
 const Weather = ({data}) => {
@@ -47,8 +48,8 @@ const Weather = ({data}) => {
         </Numbers>
           {data.name && (
             <Unit>
-            <span onClick={HandleFahrenheit}>F</span>
-            <span onClick={HandleCelcius}>C</span>
+            <TempOptions onClick={HandleFahrenheit}>F</TempOptions>
+            <TempOptions onClick={HandleCelcius}>C</TempOptions>
           </Unit>
           )}
 
